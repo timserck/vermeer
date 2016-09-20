@@ -1,0 +1,16 @@
+/*
+Theme Name: 
+Author: Adrien Pierre
+Author URI: http://adrienpierre.be
+Description: 
+*/
+html, body {
+  margin: 0 auto;
+  padding: 0; }
+
+body {
+  font-family: "Source Code Pro", "Georgia", serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #2a2a2a; }
