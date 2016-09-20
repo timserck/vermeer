@@ -1,13 +1,13 @@
 {
   "name": "dev",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "g": "^2.0.0",
     "gulp": "^3.9.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-image": "^1.3.0",
@@ -24,5 +24,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timserck/vermeer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timserck/vermeer/issues"
+  },
+  "homepage": "https://github.com/timserck/vermeer#readme",
+  "description": ""
 }
