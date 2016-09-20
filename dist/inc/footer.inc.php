@@ -17,7 +17,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="lib/jquery_2.1.1.min.js"><\/script>')</script>
-<script src="../js/all.min.js"></script>
+<script src="../dist/js/all.js"></script>
 
 </body>	
 </html>
