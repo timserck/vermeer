@@ -10,16 +10,14 @@
 <?php 
 include_once("inc/analyticstracking.inc.php");
 	  include_once("inc/header.inc.php"); ?>
+<div class="wrapper">
 
-<main class="main">
 
 <?php 
 include_once("inc/bio.inc.php");
 include_once("inc/gallery.inc.php"); 
 include_once("inc/formules.inc.php");
 ?>
-	
 
-</main>
-
+</div>	
 <?php include_once("inc/footer.inc.php"); ?>

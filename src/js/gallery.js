@@ -7,13 +7,15 @@
 //varriable
 var 
 tableauTitreVal,//input value
-figcaption,//title of item
+span,//title of item
 regexp,// regExp
 result,// result of the match of the regex
 //string,// string match regex to add hilighted
+galleryContentItemLinkHref,
 galleryContent = $( "#gallery__content" ),
 galleryContentItem = $( "#gallery__content li" ),
-galleryContentItemTitle = $( "#gallery__content figcaption" ),
+galleryContentItemLink = $( "#gallery__content a" ),
+galleryContentItemTitle = $( "#gallery__content span" ),
 tableauFilter = $( "#tableauFilter" );
 
 
@@ -32,11 +34,11 @@ tableauFilter = $( "#tableauFilter" );
        }
        regexp +='\\b';
       galleryContentItem.show();
-     galleryContent.find('figure>figcaption').each(function() {
-     	var figcaption = $(this);
+     galleryContent.find('a>span').each(function() {
+     	var span = $(this);
 
-     	//console.log(figcaption);
-     	 var result = figcaption.text().match(new RegExp(regexp,'i'));
+     	//console.log(span);
+     	 var result = span.text().match(new RegExp(regexp,'i'));
      	 //console.log(result);
      	 if (result) {
      	 // 	var string = '';
@@ -51,10 +53,10 @@ tableauFilter = $( "#tableauFilter" );
      	 			
      	 // 		}
      	 // 	}//forend
-     	 // figcaption.empty().append(string);
+     	 // span.empty().append(string);
      	 }//if end
      	 else{
-     	 	figcaption.parent().parent().hide();
+     	 	span.parent().parent().hide();
      	 }
 
      });//eachend
@@ -62,7 +64,9 @@ tableauFilter = $( "#tableauFilter" );
   });//keyUpend
 
 
-
-
-
-
+galleryContentItemLink.click(function(event) {
+	event.preventDefault();
+	galleryContentItemLinkHref =  $(this).attr('href');
+	console.log(galleryContentItemLinkHref);
+	
+});
