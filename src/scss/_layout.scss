@@ -51,6 +51,7 @@ section{
 // specifique 
 .gallery{
 	background:pink;
+	position:relative;
 		
 		
 	&__form{
@@ -75,7 +76,7 @@ section{
 				position: relative;
 				img{
 					z-index: -1;
-					width: 200px;
+					width: 250px;
 				  height: 100%;
 				  display: block;
 				  object-fit: cover;
@@ -90,6 +91,62 @@ section{
 
 				}
 			}
+		}
+	}
+
+	.tableau_detail{
+z-index: 3;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background: green;
+		
+
+    img{
+    	background: red;
+    	width: 50%;
+    	height: 100%;
+    	float: left;
+    }
+
+    &__description{
+
+    	background: red;
+    	width: 50%;
+    	height: 100%;
+    	float: left;
+    	position: relative;
+
+    	&--close{
+    		content: '';
+    		display: block;
+    		height: 50px;
+    		width: 50px;
+    		position:absolute;
+    		right: 0;
+    		top:0;
+    		background: pink;
+    	}
+    	
+    	&--p{
+    		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    	}
+    }
+
+   
+
+
+    &.active{
+
+    	visibility: visible;
+			
 		}
 	}
 
