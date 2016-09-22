@@ -71,6 +71,7 @@ galleryContentItemLink.click(function(event) {
   $( '#' + galleryContentItemLinkHref).addClass('active')	
 });
 
+
 $('.tableau_detail__description--close').click(function(event) {
   $('.tableau_detail').removeClass('active');
 });
