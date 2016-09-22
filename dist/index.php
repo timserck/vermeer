@@ -1,4 +1,9 @@
-<?php include_once("inc/meta.inc.php"); ?>
+<?php 
+include_once "inc/db/connect.db.php";
+ include_once "inc/db/fct.db.php";
+
+include_once("inc/meta.inc.php");
+?>
 
 <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 

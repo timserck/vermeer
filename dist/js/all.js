@@ -68,8 +68,15 @@ galleryContentItemLink.click(function(event) {
 	event.preventDefault();
 	galleryContentItemLinkHref =  $(this).attr('href');
 	console.log(galleryContentItemLinkHref);
-	
+  $( '#' + galleryContentItemLinkHref).addClass('active')	
 });
+
+
+$('.tableau_detail__description--close').click(function(event) {
+  $('.tableau_detail').removeClass('active');
+});
+
+
 
 // Smooth scroll inside the same page
 $('a[href^="#"]').click(function(){

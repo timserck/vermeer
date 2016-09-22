@@ -1,69 +1,46 @@
+<?php $allTableaux = getTableaux($connexion); ?>
 <section class="gallery section">
 	<h1>gallery</h1>
 	<form class='gallery__form' action="">
 		<label for="tableauFilter">type a title</label>
 		<input type="text" id='tableauFilter'>
+
 	</form>
 	<ul class='gallery__ul' id="gallery__content">
-		<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre1" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre1</span>
-			</a>
-		</li>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/c.png" alt="">
-				<span>titre2</span>
-			</a>
-		</li>
+	<?php foreach ($allTableaux as $tableau) {
 
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
+		echo "<li class='gallery__ul__li'>
+			<a class='gallery__ul__li--a' href={$tableau['titre']} >
+        <img src={$tableau['img']} alt={$tableau['titre']}>
+          <span>{$tableau['titre']}</span>
 			</a>
-		</li>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
-			</a>
-		</li>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
-			</a>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/c.png" alt="">
-				<span>titre2</span>
-			</a>
-		</li>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
-			</a>
-		</li>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
-			</a>
-		</li>
-			<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
-			</a>
-			</li>
-				<li class="gallery__ul__li">
-			<a class="gallery__ul__li--a" href="titre2" >
-				<img src="imgs/one.jpg" alt="">
-				<span>titre2</span>
-			</a>
-			</li>	
+		</li> 
+
+		<div class='tableau_detail' id={$tableau['titre']}>
+		
+		<img src={$tableau['img']} alt={$tableau['img']}>
+		<div class='tableau_detail__description'>
+		<button  class='tableau_detail__description--close'>close</button>
+
+			<div class='tableau_detail__description--txt'>
+
+			<h2>{$tableau['titre']}</h2>
+			<p>{$tableau['description']}</p>
+			</div>
+		</div>
+		
+
+			
+		</div>"
+
+		;
+		
+	} ?>
+		
+		
+		
+		
+		
+		
 	</ul>
 </section>

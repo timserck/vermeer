@@ -1,7 +1,8 @@
 <footer class="footer">
 		<ul class='credits'>
+		<h2>Credits</h2>
 		    <li class='credits__li'>
-		    	 <a class='credits__li--a' href="http://adrienpierre.be"><?php echo date('Y'); ?>.adrienpierre.be</a>
+		    	 <a class='credits__li--a' href="http://timotheeserck.be"><?php echo date('Y'); ?>.timotheeserck.be</a>
 		    </li>
 		    <li class='credits__li'>
 		    	<a class='credits__li--a' href="http://adrienpierre.be/credits.php">Crédits</a>

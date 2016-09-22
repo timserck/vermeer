@@ -63,7 +63,6 @@ p {
     line-height: 4rem; }
 
 section {
-  background: green;
   padding: 50px 0; }
 
 .highlighted {
@@ -71,9 +70,13 @@ section {
 
 .gallery {
   background: pink; }
+  .gallery__form {
+    padding: 25px 0; }
+    .gallery__form input {
+      border-bottom: 1px solid #2a2a2a; }
   .gallery__ul {
-    overflow-x: auto;
-    overflow-y: hidden;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -87,7 +90,7 @@ section {
         position: relative; }
         .gallery__ul__li--a img {
           z-index: -1;
-          width: 200px;
+          width: 250px;
           height: 100%;
           display: block;
           object-fit: cover; }
@@ -97,6 +100,61 @@ section {
           left: 0;
           z-index: 1;
           background: white; }
+  .gallery .tableau_detail {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    height: 100%;
+    width: 100%; }
+    .gallery .tableau_detail img {
+      transition: all 1s;
+      background: red;
+      width: 50%;
+      height: 100%;
+      float: left;
+      left: -50%;
+      display: block;
+      object-fit: cover;
+      position: relative; }
+    .gallery .tableau_detail__description {
+      transition: all 1s;
+      background: red;
+      width: 50%;
+      height: 100%;
+      float: left;
+      position: relative;
+      left: 50%; }
+      .gallery .tableau_detail__description--close {
+        content: '';
+        display: block;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: pink; }
+      .gallery .tableau_detail__description--txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .gallery .tableau_detail.active {
+      visibility: visible; }
+      .gallery .tableau_detail.active img {
+        left: 0%;
+        transition: all 1s; }
+      .gallery .tableau_detail.active .tableau_detail__description {
+        left: 0%;
+        transition: all 1s; }
+
+.formules {
+  background: lightblue; }
+  .formules__ul__li {
+    border-bottom: 1px solid #2a2a2a;
+    padding: 25px 0; }
 
 .footer {
   padding: 25px;
